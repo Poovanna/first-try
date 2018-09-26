@@ -1,0 +1,22 @@
+{% extends "delit.html" %}
+{% block contents %}
+        	{% csrf_token %}
+<table style="border-spacing: 20px; border: 2px solid black; text-align: middle">
+        	<tr >
+        		<th></th>
+        		<th>Sl. No</th>
+        		<th>Item</th>
+        		<th>Date Added</th>
+        	</tr>
+        	{% for el in elements %}
+        	<tr>
+        		<td><input type="checkbox" name="sel" value="{{el.id}}"></td>
+        		<td>{{ el.id }}</td>
+        		<td>{{ el.item }}</td>
+        		<td>{{ el.added_date }}</td>
+        	</tr>
+        	{% endfor %}
+
+        	
+</table>
+{% endblock %}

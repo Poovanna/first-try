@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Bucket List</title>
+    </head>
+    <body>
+    <div align="middle">
+        <h1>The Bucket List:</h1>
+        	<form action="deleteEle" method="POST">
+        	{% csrf_token %}
+        	{% block contents %}
+        	{% endblock %}
+		 <button> Delete </button>
+		</form>
+    </div>	   		
+    </body>
+</html>

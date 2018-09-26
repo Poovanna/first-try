@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Bucket List</title>
+    </head>
+    <body>
+    <div align="middle">
+        <h1>Add To The The Bucket List:</h1>
+        	<form action="submitBucket" method="POST">
+        	{% csrf_token %}
+        	Item:<input type="text" name="item" />
+        	Target Age:<input type="text" name="T_Age" />
+        	Status:<input type="text" name="status" />
+        	Country:<input type="text" name="country" />
+        	<input type="submit" value="Submit" />
+        	</form>
+    </div>	   		
+    </body>
+</html>
